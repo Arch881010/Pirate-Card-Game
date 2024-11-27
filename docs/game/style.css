@@ -1,0 +1,95 @@
+/*
+i 
+hate
+css
+*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Changed to black */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Changed to white */
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff; /* Changed to white */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #fff; /* Changed to white */
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-text {
+    padding: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-y: auto;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: 100%;
+}
+
+.card.selected {
+    background-color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+.card.matched {
+    background-color: #4caf50;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.card.mismatch {
+    background-color: #f44336;
+}

@@ -1,0 +1,166 @@
+{
+    "cards": {
+        "1a": {
+            "display": "Blackbeard",
+            "value": "Card 1",
+            "pair": "1b"
+        },
+        "1b": {
+            "display": "\"Let's jump on board, and cut them to pieces.\"",
+            "value": "Card 1",
+            "pair": "1a"
+        },
+        "2a": {
+            "display": "Howell Davis",
+            "value": "Card 2",
+            "pair": "2b"
+        },
+        "2b": {
+            "display": "\"Hark ye [...] I find by strengthening you, I have put a rod into your hands to whip myself, but I am still able to deal with you both; but since we met in love, let us part in love, for I find that three of a trade can never agree.\"",
+            "value": "Card 2",
+            "pair": "2a"
+        },
+        "3a": {
+            "display": "Black Sam",
+            "value": "Card 3",
+            "pair": "3b"
+        },
+        "3b": {
+            "display": "\"I am a free prince, and I have as much authority to make war on the whole world, as he who has a hundred sail of ships at sea and an army of 100,000 men in the field; and this my conscience tells me; but here is no arguing with such sniveling puppies who allow superiors to kick them about deck at pleasure; and pin their faith upon a pimp of a parson; a squab, who neither practices nor believes what he puts upon the chuckle-headed fools he preaches to.\"",
+            "value": "Card 3",
+            "pair": "3a"
+        },
+        "4a": {
+            "display": "Anne Bonny",
+            "value": "Card 4",
+            "pair": "4b"
+        },
+        "4b": {
+            "display": "\"I am sorry to see you here, but if you had fought like a man, you needn't be hanged like a dog.\"",
+            "value": "Card 4",
+            "pair": "4a"
+        },
+        "5a": {
+            "display": "Black Bart",
+            "value": "Card 5",
+            "pair": "5b"
+        },
+        "5b": {
+            "display": "\"There is none of you but will hang me, I know, whenever you can clinch me within your power.\"",
+            "value": "Card 5",
+            "pair": "5a"
+        },
+        "6a": {
+            "display": "William Kidd",
+            "value": "Card 6",
+            "pair": "6b"
+        },
+        "6b": {
+            "display": "\"My Lord, it is a very hard sentence. For my part, I am the innocentest person of them all, only I have been sworn against by perjured persons.\"",
+            "value": "Card 6",
+            "pair": "6a"
+        },
+        "7a": {
+            "display": "Mark Twain",
+            "value": "Card 7",
+            "pair": "7b"
+        },
+        "7b": {
+            "display": "\"Now and then we had a hope that if we lived and were good, God would permit us to be pirates.\"",
+            "value": "Card 7",
+            "pair": "7a"
+        },
+        "8a": {
+            "display": "Bartholomew Sharp",
+            "value": "Card 8",
+            "pair": "8b"
+        },
+        "8b": {
+            "display": "\"It being a certain truth, that those who are born to be hanged shall never be drowned.\"",
+            "value": "Card 8",
+            "pair": "8a"
+        }/*,
+        
+        "9a": {
+            "display": "Card 9",
+            "value": "Card 9",
+            "pair": "9b"
+        },
+        "9b": {
+            "display": "Card 9",
+            "value": "Card 9",
+            "pair": "9a"
+        },
+        "10a": {
+            "display": "Card 10",
+            "value": "Card 10",
+            "pair": "10b"
+        },
+        "10b": {
+            "display": "Card 10",
+            "value": "Card 10",
+            "pair": "10a"
+        },
+        "11a": {
+            "display": "Card 11",
+            "value": "Card 11",
+            "pair": "11b"
+        },
+        "11b": {
+            "display": "Card 11",
+            "value": "Card 11",
+            "pair": "11a"
+        },
+        "12a": {
+            "display": "Card 12",
+            "value": "Card 12",
+            "pair": "12b"
+        },
+        "12b": {
+            "display": "Card 12",
+            "value": "Card 12",
+            "pair": "12a"
+        },
+        "13a": {
+            "display": "Card 13",
+            "value": "Card 13",
+            "pair": "13b"
+        },
+        "13b": {
+            "display": "Card 13",
+            "value": "Card 13",
+            "pair": "13a"
+        },
+        "14a": {
+            "display": "Card 14",
+            "value": "Card 14",
+            "pair": "14b"
+        },
+        "14b": {
+            "display": "Card 14",
+            "value": "Card 14",
+            "pair": "14a"
+        },
+        "15a": {
+            "display": "Card 15",
+            "value": "Card 15",
+            "pair": "15b"
+        },
+        "15b": {
+            "display": "Card 15",
+            "value": "Card 15",
+            "pair": "15a"
+        },
+        "16a": {
+            "display": "Card 16",
+            "value": "Card 16",
+            "pair": "16b"
+        },
+        "16b": {
+            "display": "Card 16",
+            "value": "Card 16",
+            "pair": "16a"
+        }
+        */
+    }
+}
