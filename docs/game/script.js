@@ -1,19 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gameBoard = document.getElementById('game-board');
+    const endScreen = document.getElementById('end-screen');
+    const endMessage = document.getElementById('end-message');
+    const restartButton = document.getElementById('restart-game');
     let firstCard = null;
     let secondCard = null;
     let lockBoard = false;
+    let matchedPairs = 0;
+    const totalPairs = 8;
+    let startTime = null;
 
     // Fetch card data from cards.json
     fetch('cards.jsonc')
         .then(response => response.text())
         .then(data => {
             const jsonString = data.replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
-
             data = JSON.parse(jsonString);
             const cardDetails = data.cards;
-            const selectedCards = getRandomCards(cardDetails, 8);
+            const selectedCards = getRandomCards(cardDetails, totalPairs);
             createCards(selectedCards, cardDetails);
+            startTime = new Date(); // Start the timer
         });
 
     // Get random cards
@@ -52,7 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Select the card
     function selectCard() {
-        if (lockBoard || this === firstCard) return;
+        if (lockBoard) return;
+
+        const str = "" + this.classList;
+
+        if (str.includes("matched")) return;
+        console.log(str);
+
+        if (this === firstCard) {
+            this.classList.remove('selected');
+            firstCard = null;
+            return;
+        }
 
         this.classList.add('selected');
 
@@ -70,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isMatch) {
             firstCard.classList.add('matched');
             secondCard.classList.add('matched');
+            matchedPairs++;
+            if (matchedPairs === totalPairs) {
+                endGame();
+            }
             resetBoard();
         } else {
             lockBoard = true;
@@ -83,8 +104,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // End the game
+    function endGame() {
+        const endTime = new Date();
+        const timeElapsed = Math.floor((endTime - startTime) / 1000);
+        endMessage.textContent = `Congratulations! You matched all cards in ${timeElapsed} seconds.`;
+        endScreen.style.display = 'flex';
+    }
+
     // Reset the board
     function resetBoard() {
         [firstCard, secondCard, lockBoard] = [null, null, false];
     }
+
+    // Restart the game
+    restartButton.addEventListener('click', () => {
+        endScreen.style.display = 'none';
+        gameBoard.innerHTML = '';
+        matchedPairs = 0;
+        fetch('cards.jsonc')
+            .then(response => response.text())
+            .then(data => {
+                const jsonString = data.replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
+                data = JSON.parse(jsonString);
+                const cardDetails = data.cards;
+                const selectedCards = getRandomCards(cardDetails, totalPairs);
+                createCards(selectedCards, cardDetails);
+                startTime = new Date(); // Restart the timer
+            });
+    });
 });
